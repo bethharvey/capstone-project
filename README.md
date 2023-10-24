@@ -48,10 +48,9 @@ The measurements are:
    9. Tail length [3]
 
 
-The remaining measurements are the mass of the bird and the "hand-wing index," which is calculated using measurements 6 and 8. Information about the bird's habitat, migration pattern(s), eating habits, conservation status, and geographic location are also included [2]. The physical measurements and age, sex, and country are all from the AVONET Raw Data sheet of Supplemental dataset 1, and the geographic and behavior information is from the AVONET1 BirdLife sheet of the same file
- [2]. The physical measurements shown in the figure above and the mass and hand-wing index are the key features used for this model.
+The remaining measurements are the mass of the bird and the "hand-wing index," which is calculated using measurements 6 and 8. Information about the bird's habitat, migration pattern(s), eating habits, conservation status, and geographic location are also included [2]. The physical measurements and age, sex, and country are all from the AVONET Raw Data sheet of Supplemental dataset 1, and the geographic and behavior information come from the AVONET3 BirdTree sheet of the same file [2]. The physical measurements shown in the figure above and the mass and hand-wing index are the key features used for this model.
 
- The relevant sheet (AVONET Raw Data) was saved as a CSV file and loaded into a Pandas DataFrame for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
+ The relevant sheets (AVONET Raw Data and AVONET3 BirdTree) were saved CSV files and loaded into Pandas DataFrames for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
 
 
 
