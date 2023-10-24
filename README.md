@@ -1,4 +1,4 @@
-# capstone-project
+# Bird Identification Model
 
 Beth Harvey
 October 22, 2023
@@ -13,6 +13,46 @@ Some key components of bird conservation research are being able to accurately c
 ### Project Goals
 
 The end goal of this project is to build a model that can predict what family and/or species a bird falls into based on several physical measurements. This could help researchers more accurately classify individuals when two or more species are possible. The model will be trained and tested using the AVONET dataset [3], a collective effort by researchers and volunteers to provide measurements of over 90,000 specimens of over 11,000 bird species. 
+
+### Process
+
+The following plan was be followed to complete this project:
+
+   1. Collect data
+   2. Clean and transform data
+   3. Exploratory data analysis
+   4. Split data into train and test sets
+   5. Build and train model
+   6. Test model
+   7. Tune model as needed
+   8. Compile and discuss results
+
+The key components of this process are the data preparation and model tuning. The success of the model depended heavily on both of those pieces. The dataset was pretty clean already, so standardizing and/or scaling was the biggest component of preparation. The biggest limitation was the achievable accuracy of the model. There are a lot of very similar bird species, so identifying the species accurately enough to make a good model may be beyond the scope of this project. The model may be limited to identifying the family a particular bird belongs to instead.
+
+### Data
+
+The data used for this project is from a large, collective effort known as the AVONET dataset. It is a collection of physical measurements, habitat information, and geographic information for over 90,000 specimens representing over 11,000 species of birds [3]. The majority of individuals measured were museum specimens, though many live birds were included as well. The raw data can be downloaded as Microsoft Excel files from https://figshare.com/s/b990722d72a26b5bfead [2]. The physical measurements are described in the Metadata sheet of Supplementary dataset 1 from the link above, and they are also shown in the figure below [3].
+
+![Illustration of bird showing measurements used](measurements-fig.jpg)
+
+The measurements are:
+
+   1. Beak length from tip to base of skull
+   2. Beak length from front edge of nostril to tip
+   3. Beak width from front edges of nostrils
+   4. Beak depth from front edges of nostrils
+   5. Lower leg (tarsus) length
+   6. Wing length from bend to end of longest feather 
+   7. Wing length from bend to end of outer secondary (shorter) feather
+   8. Length from tip of outer secondary (shorter) feather to tip of longest feather
+   9. Tail length [3]
+
+
+The remaining measurements are the mass of the bird and the "hand-wing index," which is calculated using measurements 6 and 8. Information about the bird's habitat, migration pattern(s), eating habits, conservation status, and geographic location are also included [2]. The physical measurements and age, sex, and country are all from the AVONET Raw Data sheet of Supplemental dataset 1, and the geographic and behavior information is from the AVONET1 BirdLife sheet of the same file
+ [2]. The physical measurements shown in the figure above and the mass and hand-wing index are the key features used for this model.
+
+ The relevant sheet (AVONET Raw Data) was saved as a CSV file and loaded into a Pandas DataFrame for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
+
 
 
 ### References 
