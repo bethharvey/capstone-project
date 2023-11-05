@@ -56,27 +56,24 @@ The remaining measurements are the mass of the bird and the "hand-wing index," w
 
 | Feature Name | Description | Data Type | Example |
 | ------------ | ---------- | --------- | -------- |
-| sex | Sex of the observed specimen | String | M |
+| sex | Sex of the observed specimen | Integer | 0 |
 | age | Age of the specimen, 0 for juvenile, 1 for adult | Integer | 0 |
-| beak_length_culmens | Beak length from tip to base of skull | Float | 13.8 |
-| beak_width | Beak width from front edges of nostrils | Float | 5.2 |
-| beak_depth | Beak depth from front edges of nostrils | Float | 6.8 |
-| tarsus_length | Lower leg (tarsus) length | Float | 18.3 |
-| wing_length | Wing length from bend to end of longest feather | Float | 93.0 |
-| kipps_dist | Length from tip of outer secondary feather to tip of longest feather | Float | 38.0 |
-| secondary1 | Wing length from bend to end of outer secondary (shorter) feather | Float | 55.0 |
-| hand_wing | 100 * Kipps Distance / Wing Length | Float | 40.90 |
-| tail_length | Length of tail from base to tip | Float | 56.0 |
-| family | Taxonomic classification of species | String | Passeridae |
-| mass | Average mass of recorded specimens for species | Float | 22.3 |
-| habitat | Typical environment where the species lives | String | Rock |
-| habitat_density | How thickly vegetated the typical habitat is | Integer | 3 |
-| migration | The degree to which the species is known to migrate | Integer | 3 |
+| beak_length_culmens | Beak length from tip to base of skull | Float | 14.927649 |
+| beak_width | Beak width from front edges of nostrils | Float | 5.428154 |
+| beak_depth | Beak depth from front edges of nostrils | Float | 6.904628 |
+| tarsus_length | Lower leg (tarsus) length | Float | 23.309142	 |
+| wing_length | Wing length from bend to end of longest feather | Float | 73.014141 |
+| tail_length | Length of tail from base to tip | Float | 66.838562 |
+| family | Taxonomic classification of species | String | Passerellidae |
+| mass | Average mass of recorded specimens for species | Float | 24.8 |
+| habitat | Typical environment where the species lives | String | Forest |
+| habitat_density | How thickly vegetated the typical habitat is | Integer | 1 |
+| migration | The degree to which the species is known to migrate | Integer | 1 |
 | trophic_level | The typical diet of the species | String | Herbivore |
-| trophic_niche | Where most of the species' food comes from | String | Granivore |
-| primary_lifestyle | Where the species spends most of its time | String | Terrestrial |
-| centroid_latitude | Latitude of the geographic center of the species' range | Float | 32.97 |
-| centroid_longitude | Longitude of the geographic center of the species' range | Float | 52.87 |
+| trophic_niche | Where most of the species' food comes from | String | Omnivore |
+| primary_lifestyle | Where the species spends most of its time | String | Insessorial |
+| centroid_latitude | Latitude of the geographic center of the species' range | Float | 5.90 |
+| centroid_longitude | Longitude of the geographic center of the species' range | Float | -71.73 |
 
 ### References 
 
@@ -113,7 +110,6 @@ veira, L., Kelly, D.J., Annorbah, N.N.D., Pollock, H.S., Grabowska-Zhang, A.M.,
 McEntee, J.P., Carlos T. Gonzalez, J., Meneses, C.G., Mu ̃noz, M.C., Powell, L.L.,
 Jamie, G.A., Matthews, T.J., Johnson, O., Brito, G.R.R., Zyskowski, K., Crates,
 R., Harvey, M.G., Jurado Zevallos, M., Hosner, P.A., Bradfer-Lawrence, T., Maley,
-Bird Identification Model 7
 J.M., Stiles, F.G., Lima, H.S., Provost, K.L., Chibesa, M., Mashao, M., Howard,
 J.T., Mlamba, E., Chua, M.A.H., Li, B., G ́omez, M.I., Garc ́ıa, N.C., P ̈ackert,
 M., Fuchs, J., Ali, J.R., Derryberry, E.P., Carlson, M.L., Urriza, R.C., Brzeski,
