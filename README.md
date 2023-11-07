@@ -54,6 +54,8 @@ The remaining measurements are the mass of the bird and the "hand-wing index," w
 
 ### Feature Definitions 
 
+The features used for this model are described in the table below.
+
 | Feature Name | Description | Data Type | Example |
 | ------------ | ---------- | --------- | -------- |
 | sex | Sex of the observed specimen | Integer | 0 |
