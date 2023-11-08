@@ -47,7 +47,7 @@ The measurements are:
    9. Tail length [8]
 
 
-The remaining measurements are the mass of the bird and the "hand-wing index," which is calculated using measurements 6 and 8. Information about the bird's habitat, migration pattern(s), eating habits, conservation status, and geographic location are also included [7]. The physical measurements and age, sex, and country are all from the AVONET Raw Data sheet of Supplemental dataset 1, and the geographic and behavior information come from the AVONET3 BirdTree sheet of the same file [7]. The categorical information from the BirdTree sheet was matched to the appropriate raw data record to create the additional features. This sheet was chosen over the AVONET1 BirdLife and AVONET2 eBird sheets because it had a match for 90,303 of the 90,372 raw records, which was the highest of the three. The physical measurements shown in the figure above and the mass and hand-wing index are the key features used for this model.
+The remaining measurements are the mass of the bird and the "hand-wing index," which is calculated using measurements 6 and 8. Information about the bird's habitat, migration pattern(s), eating habits, conservation status, and geographic location are also included [7]. The physical measurements and age, sex, and country are all from the AVONET Raw Data sheet of Supplemental dataset 1, and the geographic and behavior information come from the AVONET3 BirdTree sheet of the same file [7]. The categorical information from the BirdLife sheet was matched to the appropriate raw data record to create the additional features. This sheet was chosen over the AVONET2 eBird and AVONET3 BirdTree sheets because it had a match for 1,525 records of sparrow species, which was the highest of the three.  The physical measurements shown in the figure above and the mass and hand-wing index are the key features used for this model.
 
  The relevant sheets (AVONET Raw Data and AVONET3 BirdTree) were saved CSV files and loaded into Pandas DataFrames for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
 
@@ -74,8 +74,7 @@ The features used for this model are described in the table below.
 | trophic_level | The typical diet of the species | String | Herbivore |
 | trophic_niche | Where most of the species' food comes from | String | Omnivore |
 | primary_lifestyle | Where the species spends most of its time | String | Insessorial |
-| centroid_latitude | Latitude of the geographic center of the species' range | Float | 5.90 |
-| centroid_longitude | Longitude of the geographic center of the species' range | Float | -71.73 |
+
 
 ### References 
 
