@@ -4,77 +4,18 @@ Beth Harvey
 October 22, 2023
 Data Analytics Capstone Project
 
-## Introduction
-
-As climate change, habitat loss, and disease continue to threaten wildlife through- out the world, detailed research is becoming more and more important. In 2023 alone, the U.S. Fish and Wildlife service took 21 species off of the Endangered Species Act list because they are now considered extinct [6]. Ten of those 21 species are birds. More research and resources are needed to develop effective conservation efforts. Some key components of bird conservation research are being able to accurately classify individual specimens, as well as being able to identify potential connections between different species. One of the most valuable resources for
-an effort like this is an extensive collection of detailed measurements for a wide variety of species. There are several different families of birds that are difficult to differentiate. One of the more challenging pairs is old-world sparrows and new-world sparrows [2]. Both families are part of the order Passeriformes, but the old-world spar- rows make up the Passeridae family, while the new-world sparrows compose the Passerellidae family [4] [3]. New-world sparrows are native to North America, while old-world sparrows are native to Europe, but are also widespread in North America as introduced species [2]. It is important to be able to distinguish if a specimen is an old-world or new-world sparrow before exploring conservation efforts, so that these efforts can focus on helping native species, not introduced ones.
-
 ### Project Goals
 
-The end goal of this project is to build a model that can predict what taxonomic order a bird falls into based on several physical measurements. This could help researchers more accurately classify individuals when two or more species are possible. The model will be trained and tested using the AVONET dataset [8], a collective effort by researchers and volunteers to provide measurements of over 90,000 specimens of over 11,000 bird species. 
+The goal of this project is to build a model that can predict what taxonomic order a bird falls into based on several physical measurements. This could help researchers more accurately classify individuals when two or more species are possible. The model will be trained and tested using the AVONET dataset [8], a collective effort by researchers and volunteers to provide measurements of over 90,000 specimens of over 11,000 bird species. 
 
-### Process
+### Files
 
-The following plan was be followed to complete this project:
+* avonet_raw.csv: Main data file for this project, containing measurements of 90,020 bird specimens representing over 11,000 species
+* avonet1_birdlife.csv: Measurement averages of each species, with habitat, lifestyle, and geographic information
+* avonet_bird_identification.ipynb: Jupyter Notebook containing the code, analyses, and results of this project
 
-   1. Collect data
-   2. Clean and transform data
-   3. Exploratory data analysis
-   4. Split data into train and test sets
-   5. Build and train model
-   6. Test model
-   7. Tune model as needed
-   8. Compile and discuss results
-
-The key components of this process are the data preparation and model tuning. The success of the model depended heavily on both of those pieces. The dataset was pretty clean already, so standardizing and/or scaling was the biggest component of preparation. The biggest limitation was the achievable accuracy of the model. There are a lot of very similar bird species, so identifying the species accurately enough to make a good model may be beyond the scope of this project. The model may be limited to identifying the family a particular bird belongs to instead.
-
-### Data
-
-The data used for this project is from a large, collective effort known as the AVONET dataset. It is a collection of physical measurements, habitat information, and geographic information for over 90,000 specimens representing over 11,000 species of birds [8]. The majority of individuals measured were museum specimens, though many live birds were included as well. The raw data can be downloaded as Microsoft Excel files from https://figshare.com/s/b990722d72a26b5bfead [7]. The physical measurements are described in the Metadata sheet of Supplementary dataset 1 from the link above, and they are also shown in the figure below [8].
-
-![Illustration of bird showing measurements used](measurements-fig.jpg)
-
-The measurements are:
-
-   1. Beak length from tip to base of skull
-   2. Beak length from front edge of nostril to tip
-   3. Beak width from front edges of nostrils
-   4. Beak depth from front edges of nostrils
-   5. Lower leg (tarsus) length
-   6. Wing length from bend to end of longest feather 
-   7. Wing length from bend to end of outer secondary (shorter) feather
-   8. Length from tip of outer secondary (shorter) feather to tip of longest feather
-   9. Tail length [8]
-
-
-The remaining measurements are the mass of the bird and the "hand-wing index," which is calculated using measurements 6 and 8. Information about the bird's habitat, migration pattern(s), eating habits, conservation status, and geographic location are also included [7]. The physical measurements and age, sex, and country are all from the AVONET Raw Data sheet of Supplemental dataset 1, and the geographic and behavior information come from the AVONET3 BirdTree sheet of the same file [7]. The categorical information from the BirdLife sheet was matched to the appropriate raw data record to create the additional features. This sheet was chosen over the AVONET2 eBird and AVONET3 BirdTree sheets because it had a match for 1,525 records of sparrow species, which was the highest of the three.  The physical measurements shown in the figure above and the mass and hand-wing index are the key features used for this model.
 
  The relevant sheets (AVONET Raw Data and AVONET3 BirdTree) were saved CSV files and loaded into Pandas DataFrames for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
-
-
-### Feature Definitions 
-
-The features used for this model are described in the table below.
-
-| Feature Name | Description | Data Type | Example |
-| ------------ | ---------- | --------- | -------- |
-| sex | Sex of the observed specimen | Integer | 0 |
-| age | Age of the specimen, 0 for juvenile, 1 for adult | Integer | 0 |
-| beak_length_culmens | Beak length from tip to base of skull | Float | 14.927649 |
-| beak_width | Beak width from front edges of nostrils | Float | 5.428154 |
-| beak_depth | Beak depth from front edges of nostrils | Float | 6.904628 |
-| tarsus_length | Lower leg (tarsus) length | Float | 23.309142	 |
-| wing_length | Wing length from bend to end of longest feather | Float | 73.014141 |
-| tail_length | Length of tail from base to tip | Float | 66.838562 |
-| family | Taxonomic classification of species | String | Passerellidae |
-| mass | Average mass of recorded specimens for species | Float | 24.8 |
-| habitat | Typical environment where the species lives | String | Forest |
-| habitat_density | How thickly vegetated the typical habitat is | Integer | 1 |
-| migration | The degree to which the species is known to migrate | Integer | 1 |
-| trophic_level | The typical diet of the species | String | Herbivore |
-| trophic_niche | Where most of the species' food comes from | String | Omnivore |
-| primary_lifestyle | Where the species spends most of its time | String | Insessorial |
-
 
 ### References 
 
