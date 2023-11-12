@@ -16,6 +16,7 @@ The goal of this project is to build a model that can predict what taxonomic ord
 
 
  The relevant sheets (AVONET Raw Data and AVONET3 BirdTree) were saved CSV files and loaded into Pandas DataFrames for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
+ The entire project can be viewed on [GitHub](https://github.com/bethharvey/capstone-project).
 
 ### References 
 
