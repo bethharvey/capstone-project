@@ -14,6 +14,7 @@ The goal of this project is to build a model that can predict what taxonomic ord
 
 ### Files
 
+* AVONET Supplementary dataset 1.xlsx: Original full dataset for this project
 * avonet_raw.csv: Main data file for this project, containing measurements of 90,020 bird specimens representing over 11,000 species
 * avonet1_birdlife.csv: Measurement averages of each species, with habitat, lifestyle, and geographic information
 * avonet_bird_identification.ipynb: Jupyter Notebook containing the code, analyses, and results of this project
