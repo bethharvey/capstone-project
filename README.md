@@ -1,4 +1,4 @@
-# Bird Identification Model
+# Machine Learning Model for Sparrow Classification
 
 Beth Harvey
 October 22, 2023
@@ -19,10 +19,19 @@ The goal of this project is to build a model that can predict what taxonomic ord
 * avonet1_birdlife.csv: Measurement averages of each species, with habitat, lifestyle, and geographic information
 * avonet_bird_identification.ipynb: Jupyter Notebook containing the code, analyses, and results of this project
 
-
+### Links
  The relevant sheets (AVONET Raw Data and AVONET3 BirdTree) were saved CSV files and loaded into Pandas DataFrames for analysis in the [Jupyter Notebook project file](avonet_bird_identification.ipynb).
  The entire project can be viewed on [GitHub](https://github.com/bethharvey/capstone-project).
  The full report for this project can be viewed on [Overleaf](https://www.overleaf.com/read/hzzmcjpxkfvz#0b9003).
+
+### Getting Started
+Required: 
+* Git
+* Python 3.7 or higher
+* Virtual environment:
+    * `python3 -m venv .venv`
+    * `source .venv/bin/activate`
+    * `pip install -r requirements.txt`
 
 ### References 
 
