@@ -1,7 +1,9 @@
 # Machine Learning Model for Sparrow Classification
 
 Beth Harvey
+
 October 22, 2023
+
 Data Analytics Capstone Project
 
 # Abstract
